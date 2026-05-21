@@ -19,8 +19,10 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
+// Auth Routes
+app.use('/api/auth', require('./routes/auth'));
+
 // Routes (to be implemented)
-// app.use('/api/auth', require('./routes/auth'));
 // app.use('/api/products', require('./routes/products'));
 // app.use('/api/transactions', require('./routes/transactions'));
 // app.use('/api/inventory', require('./routes/inventory'));
